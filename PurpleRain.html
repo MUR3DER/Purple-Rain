@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seite mit Bild und Buttons</title>
+    <style>
+        /* Hintergrundbild und Anpassung für verschiedene Bildschirmgrößen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('file:///C:/Users/Justi/Pictures/Neu%20Purple%20Rain.jpg'); /* Ersetze durch dein Bild */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* Container für die Buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(75, 6, 75, 0.8); /* Halbtransparenter Hintergrund */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(162, 0, 255, 0.5);
+        }
+
+        /* Style für die Buttons */
+        .btn {
+            padding: 15px 30px;
+            margin: 0 20px;
+            font-size: 18px;
+            border: none;
+            background-color: #f85eeb; /* Farbe für den Button */
+            color: rgb(95, 11, 46);
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #000000; /* Farbe beim Hover */
+        }
+
+        /* Responsives Design für kleinere Bildschirme */
+        @media screen and (max-width: 768px) {
+            .button-container {
+                flex-direction: column;
+            }
+
+            .btn {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <button class="btn" onclick="openLink1()">Langwaffen</button>
+        <button class="btn" onclick="openLink2()">Kurzwaffen</button>
+    </div>
+
+    <script>
+        function openLink1() {
+            window.open('https://docs.google.com/forms/d/e/1FAIpQLScw8vvnjxIoX9r7KRN8E8JejSoeeWkEsexeStZDh9uGJQ2o0w/viewform', '_blank');  // Ersetze durch deinen Link
+        }
+
+        function openLink2() {
+            window.open('https://docs.google.com/forms/d/e/1FAIpQLScfSB3tLkzs7HsDjCT4IIAAWYIE2sKBbIeIOfSk3xXpioDPcw/viewform?fbzx=3419119518301911990', '_blank');  // Ersetze durch deinen Link
+        }
+    </script>
+
+</body>
+</html>
